@@ -11,7 +11,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { AppDispatch } from '@/redux/store';
 import { logoutAction } from '@/redux/actions/userActions';
 import { resetAction } from '@/redux/actions/tasksActions';
-import { LOGOUT_ERROR } from '@/utils/contants';
+import { LOGOUT_ERROR } from '@/utils/constants';
 import { showToastAction } from '@/redux/actions/toastActions';
 import { selectUser } from '@/redux/initialStates/selectors';
 

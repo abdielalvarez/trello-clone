@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { AppDispatch } from '@/redux/store';
 import { getAction } from '@/redux/actions/tasksActions';
 import { selectUser } from '@/redux/initialStates/selectors';
-import { GET_ERROR, LOGIN_ERROR } from "@/utils/contants";
+import { GET_ERROR, LOGIN_ERROR } from "@/utils/constants";
 import { showToastAction } from "@/redux/actions/toastActions";
 
 const Home = () => {

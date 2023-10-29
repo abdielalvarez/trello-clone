@@ -1,4 +1,3 @@
-// store.js
 import { configureStore } from '@reduxjs/toolkit';
 import rootReducer, { RootState } from '../reducers/rootReducer';
 import thunk, { ThunkAction } from 'redux-thunk';

@@ -4,7 +4,7 @@ import { AppDispatch } from '@/redux/store';
 import { useRouter } from 'next/router';
 import { useDispatch, useSelector } from 'react-redux'
 import Button from '../Button';
-import { FormPropsUIType } from '@/utils/converters';
+import { FormPropsUIType } from '@/utils/forms/formDynamicTypes';
 import { FormContainer } from "@/styles/components/Login/LoginForm.style";
 import { Container } from '../Container';
 import { selectTasks, selectUser } from '@/redux/initialStates/selectors';

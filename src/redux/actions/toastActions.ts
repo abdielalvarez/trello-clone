@@ -1,4 +1,4 @@
-import { TOAST_DURATION_MILISECONDS } from '@/utils/contants';
+import { TOAST_DURATION_MILISECONDS } from '@/utils/constants';
 import { Dispatch } from 'redux';
 import { HIDE_TOAST, SHOW_TOAST } from './actionType';
 

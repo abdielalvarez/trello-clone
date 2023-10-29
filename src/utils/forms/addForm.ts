@@ -1,8 +1,8 @@
 import { AppDispatch } from "@/redux/store";
-import { ButtonPropsType, Input } from "../converters";
+import { ButtonPropsType, Input } from "./formDynamicTypes";
 import { InputDataState } from "../validations";
 import { NextRouter } from "next/router";
-import { CREATE_ERROR, CREATE_SUCCESSFUL } from "../contants";
+import { CREATE_ERROR, CREATE_SUCCESSFUL } from "../constants";
 import { showToastAction } from "@/redux/actions/toastActions";
 import { createAction } from "@/redux/actions/tasksActions";
 import { StageType, Task } from "@/redux/initialStates/tasks";

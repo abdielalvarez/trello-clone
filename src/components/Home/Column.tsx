@@ -10,7 +10,7 @@ import {
     ColumnTitle,
     ColumnWrapper
 } from '@/styles/components/Home/Column.style';
-import DynamicForm from './DynamicForm';
+import DynamicForm from '@/components/DynamicForm';
 import {
     buttonsBeforeSubmit,
     buttonsToSubmit,

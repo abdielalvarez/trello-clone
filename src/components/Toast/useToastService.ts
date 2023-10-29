@@ -1,4 +1,4 @@
-import { TOAST_DURATION_MILISECONDS } from '@/utils/contants';
+import { TOAST_DURATION_MILISECONDS } from '@/utils/constants';
 import { useState } from 'react';
 
 const useToastService = () => {

@@ -1,7 +1,7 @@
 import {
     ButtonElement
 } from "@/styles/components/Button/index.style";
-import { ButtonPropsType } from '@/utils/converters';
+import { ButtonPropsType } from '@/utils/forms/formDynamicTypes';
 
 const Button = ({
     disabled = false,

@@ -19,7 +19,7 @@ interface DynamicInputType {
   inputData: InputContentInfo
   name: string
   validationRules?: ValidationRules
-  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  onChange: (e: ChangeEvent<HTMLInputElement>, isValid: IsValidType) => void;
   onBlur: (name: string, isValid: IsValidType) => void
 }
 
@@ -33,6 +33,15 @@ const DynamicInput = ({
   onChange,
   onBlur
 }: DynamicInputType) => {
+
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement>
+  ) => {
+    if (validationRules) {
+      const isValid = validateInput(e.target.value, validationRules);
+      onChange(e, isValid)
+    }
+  }
 
   const handleBlur = () => {
     if (validationRules) {
@@ -57,7 +66,7 @@ const DynamicInput = ({
         name={name}
         placeholder={placeholder}
         value={inputData.value}
-        onChange={onChange}
+        onChange={handleChange}
         onBlur={handleBlur}
       />
       {isValid !== null && errorMessage && (

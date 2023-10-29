@@ -6,7 +6,7 @@ import { StageType, Task, TaskWithId } from '@/redux/initialStates/tasks';
 import { updateAction } from '@/redux/actions/tasksActions';
 import { useDispatch, useSelector } from 'react-redux'
 import { AppDispatch } from '@/redux/store';
-import { COLUMNS, UPDATE_ERROR } from '@/utils/contants';
+import { COLUMNS, UPDATE_ERROR } from '@/utils/constants';
 import { selectTasks, selectUser } from '@/redux/initialStates/selectors';
 import { showToastAction } from '@/redux/actions/toastActions';
 

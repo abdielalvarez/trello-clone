@@ -1,5 +1,5 @@
 import { AppDispatch } from "@/redux/store";
-import { Input } from "../converters";
+import { Input } from "./formDynamicTypes";
 import { InputDataState } from "../validations";
 import { loginAction } from "@/redux/actions/userActions";
 import { HOME_ROUTE } from "../routes";
@@ -9,7 +9,7 @@ import {
     AUTHENTICATION_ERROR,
     NOT_FOUND_USER_API_ERROR,
     USER_CUSTOMIZED_ERROR
-} from "../contants";
+} from "../constants";
 import { showToastAction } from "@/redux/actions/toastActions";
 
 export const inputs: Input[] = [
