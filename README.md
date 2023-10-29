@@ -1,10 +1,3 @@
-  TTTTT    RRRR     EEEEE    L        L       OOO
-    T      R   R    E        L        L      O   O
-    T      RRRR     EEE      L        L      O   O
-    T      R   R    E        L        L      O   O
-    T      R    R   EEEEE    LLLLL    LLLLL   OOO
-
-
 # Clon de Trello hecho por Abdiel Alvarez
 
 Una aplicación increíble desarrollada en TypeScript, React, Next.js 13, Redux y Styled Components.
