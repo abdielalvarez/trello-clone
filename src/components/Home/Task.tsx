@@ -6,7 +6,7 @@ import {
     TaskWrapper
 } from '@/styles/components/Home/Task.style';
 import React from 'react';
-import DynamicForm from './DynamicForm';
+import DynamicForm from '@/components/DynamicForm';
 import {
     buttonsBeforeSubmit,
     buttonsToSubmit,

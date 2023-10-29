@@ -9,9 +9,9 @@ import {
     IsValidType,
 } from '@/utils/validations';
 import {
-    FormPropsType,
-    convertToInitialFormValues
-} from '@/utils/converters';
+    FormPropsType
+} from '@/utils/forms/formDynamicTypes';
+import { convertToInitialFormValues } from '@/utils/converters';
 
 const Form = ({
     inputs,
@@ -25,14 +25,15 @@ const Form = ({
     const [inputData, setInputData] = useState<InputDataState>(initialState);
 
     const handleChange = (
-        e: ChangeEvent<HTMLInputElement>
+        e: ChangeEvent<HTMLInputElement>,
+        isValid: IsValidType
     ) => {
         const { name, value } = e.target
         setInputData({
             ...inputData,
             [name]: {
                 value,
-                isValid: inputData[name].isValid
+                isValid
             }
         });
     };

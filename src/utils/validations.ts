@@ -22,7 +22,11 @@ export type ValidationRules = {
     isRequired?: boolean;
 };
 
-const applyValidationRule = (rule: keyof ValidationRules, value: string, rules: ValidationRules): boolean => {
+const applyValidationRule = (
+    rule: keyof ValidationRules,
+    value: string,
+    rules: ValidationRules
+): boolean => {
     switch (rule) {
         case 'minLength':
             if (typeof rules.minLength !== 'boolean') {

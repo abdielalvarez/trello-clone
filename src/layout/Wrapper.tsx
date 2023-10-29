@@ -15,6 +15,7 @@ export const Wrapper = ({ children }: LayoutProps) => {
     const thisIsHome = asPath === HOME_ROUTE
     const heightLayout = thisIsHome ? 'inherit' : '80vh'
     const backgroundColor = thisIsHome ? '#026aa7' : 'inherit'
+    const overflowX = thisIsHome ? 'scroll' : 'inherit'
 
     return (
       <div>
@@ -25,6 +26,7 @@ export const Wrapper = ({ children }: LayoutProps) => {
         <Main
           height={heightLayout}
           background={backgroundColor}
+          overflowx={overflowX}
         >
           {children}
         </Main>

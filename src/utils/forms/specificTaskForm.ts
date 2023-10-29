@@ -5,8 +5,8 @@ import { StageType, Task, TaskWithId } from "@/redux/initialStates/tasks";
 import { UserType } from "@/redux/initialStates/user";
 import { deleteAction, updateAction } from "@/redux/actions/tasksActions";
 import { showToastAction } from "@/redux/actions/toastActions";
-import { DELETE_ERROR, DELETE_SUCCESSFUL, UPDATE_ERROR, UPDATE_SUCCESSFUL } from "../contants";
-import { ButtonPropsType, Input } from "../converters";
+import { DELETE_ERROR, DELETE_SUCCESSFUL, UPDATE_ERROR, UPDATE_SUCCESSFUL } from "../constants";
+import { ButtonPropsType, Input } from "./formDynamicTypes";
 
 export const inputs: Input[] = [
     {

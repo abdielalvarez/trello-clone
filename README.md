@@ -26,4 +26,12 @@ Asegúrate de tener Node.js y npm instalados antes de comenzar.
    ```bash
    npm run dev
 
+3. Accede al localhost:
+
+   Accede aquí para hacer login e iniciar sesión
+   http://localhost:3000/login
+
+   La API ofrece como válido esta cuenta:
+      email: eve.holt@reqres.in
+      password: cityslicka
    

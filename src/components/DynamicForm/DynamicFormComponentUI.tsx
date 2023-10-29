@@ -1,15 +1,11 @@
-import React, { useState } from 'react';
 import { StageType } from '@/redux/initialStates/tasks';
 import Button from '../Button';
 import Form from '../Form';
 import { Container } from '../Container';
-import { ButtonPropsType, Input, SubmitFnType } from '@/utils/converters';
-import { useSelector, useDispatch } from 'react-redux'
-import { selectTasks, selectUser } from '@/redux/initialStates/selectors';
-import { AppDispatch } from '@/redux/store';
-import DynamicButton from './DynamicButton';
+import { ButtonPropsType, Input, SubmitFnType } from '@/utils/forms/formDynamicTypes';
+import DynamicButton from '@/components/DynamicButton';
 
-type DynamicFormPropsType = {
+type DynamicFormComponentUIPropsType = {
     stage?: StageType
     buttonCancelLabel: string
     inputs: Input[]
@@ -19,9 +15,11 @@ type DynamicFormPropsType = {
     showInput: boolean
     setShowInput: React.Dispatch<React.SetStateAction<boolean>>
     oldItem?: any
+    handleButtonBeforeSubmit: (button: ButtonPropsType, index: number) => void
+    buttonSelected: number
 };
 
-const DynamicForm: React.FC<DynamicFormPropsType> = ({
+const DynamicFormComponentUI: React.FC<DynamicFormComponentUIPropsType> = ({
     stage,
     buttonCancelLabel,
     inputs,
@@ -30,42 +28,10 @@ const DynamicForm: React.FC<DynamicFormPropsType> = ({
     buttonsToSubmit,
     showInput,
     setShowInput,
-    oldItem
+    oldItem,
+    handleButtonBeforeSubmit,
+    buttonSelected
 }) => {
-    
-    const user = useSelector(selectUser)
-    const tasks = useSelector(selectTasks)
-    const dispatch = useDispatch<AppDispatch>()
-    const [buttonSelected, setButtonSelected] = useState(0)
-
-    const handleShowInput = (index: number) => {
-        setButtonSelected(index)
-        setShowInput(true)
-    }
-
-    const handleCancel = () => {
-        setShowInput(false);
-    };
-
-    const handleButtonBeforeSubmit = (
-        button: ButtonPropsType,
-        index: number
-    ) => {
-        if (button.submitSecondaryAction) {
-            button.submitSecondaryAction(
-                dispatch,
-                user,
-                tasks,
-                oldItem
-            )
-            return
-        }
-        if (!button.onClick) {
-            handleShowInput(index)
-        }
-        return
-    }
-
     return (
         <>
             {showInput ?
@@ -81,7 +47,7 @@ const DynamicForm: React.FC<DynamicFormPropsType> = ({
                     <Container margin='10px 0 0'>
                         <Button
                             type='button'
-                            onClick={handleCancel}
+                            onClick={() => setShowInput(false)}
                             text={buttonCancelLabel}
                             backgroundColor='red'
                         />
@@ -107,4 +73,4 @@ const DynamicForm: React.FC<DynamicFormPropsType> = ({
     );
 };
 
-export default DynamicForm;
+export default DynamicFormComponentUI;

@@ -1,6 +1,6 @@
-import Button from '../Button';
-import { Container } from '../Container';
-import { ButtonPropsType } from '@/utils/converters';
+import Button from '@/components/Button';
+import { Container } from '@/components/Container';
+import { ButtonPropsType } from '@/utils/forms/formDynamicTypes';
 import Image from 'next/image';
 
 type DynamicButtonPropsType = {
